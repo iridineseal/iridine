@@ -30,5 +30,7 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
+  client.on("error", (e) => client.channels.get("551617849836306432").send(e));
+
 client.login(process.env.token);
 module.exports = client;
