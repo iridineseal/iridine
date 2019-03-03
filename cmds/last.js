@@ -5,10 +5,8 @@ const config = {
 const flastm = require('flastm')(config);
 const JsonFind = require('json-find');
 module.exports.run = async(client, message, args) => {
-	function randomRGB() {
-	return Math.round(Math.random(255));	
-	}
 const user = flastm.user;
+const status = "";
 var result;
 try {
 await user.getRecentTracks(args[0]).then(res => result = res);
@@ -21,17 +19,13 @@ const poop = JsonFind(result);
 if(poop.findValues('text').text === undefined) return message.channel.send("That user is not playing any music.");
 const trackName = poop.findValues('text').text.toString() + " - " + poop.findValues('name').name.toString();
 function Random(num) {return Math.floor(Math.random * num)};
-/*const fs = require('fs');
-fs.writeFile("./test.txt", JSON.stringify(result), function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("The file was saved!");
-}); */
-console.log(randomRGB());
+if(poop.findValues('nowplaying') == "true") {
+	status = "Currently playing for ";
+} else {
+	status = "Last playing for "	
+}
 message.channel.send({embed: {
-  title: "Currently playing for " + poop.findValues('user').user.toString(),
+  title: status + poop.findValues('user').user.toString(),
   color: client.resolver.resolveColor('RANDOM'),
   description: trackName
   }});
