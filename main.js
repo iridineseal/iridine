@@ -1,8 +1,10 @@
 const Discord = require("discord.js");
 const chalk = require("chalk");
 const fs = require("fs");
+const config = require("./config.json");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+client.config = config;
 client.ownerids = [ 107568311838994432, 470685461090926614, 488182608367452201 ];
 //command handler
 fs.readdir("./cmds/", (err, files) => {
