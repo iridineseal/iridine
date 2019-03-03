@@ -28,5 +28,5 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-client.login(process.env.bot.token);
+client.login(process.env.token);
 module.exports = client;
