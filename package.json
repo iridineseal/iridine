@@ -1,0 +1,21 @@
+{
+  "name": "iridine",
+  "version": "0.0.1",
+  "description": "Iridine Discord Bot",
+  "main": "main.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "^11.4.2",
+    "flastm": "^1.0.1",
+    "json-find": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "seal",
+  "license": "UNLICENSED"
+}

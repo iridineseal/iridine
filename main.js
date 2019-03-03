@@ -1,0 +1,32 @@
+const Discord = require("discord.js");
+const chalk = require("chalk");
+const fs = require("fs");
+const client = new Discord.Client();
+client.commands = new Discord.Collection();
+client.ownerids = [ 107568311838994432, 470685461090926614, 488182608367452201 ];
+//command handler
+fs.readdir("./cmds/", (err, files) => {
+  if(err) console.log(err);
+  let jsfile = files.filter(f => f.split(".").pop() === "js")
+jsfile.forEach((f, i) =>
+  {
+    let props = require(`./cmds/${f}`);
+    console.log(chalk.green(`Command ${f} successfully loaded.`));
+    client.commands.set(props.help.name, props);
+  });
+});
+//event handler
+fs.readdir("./events/", (err, files) => {
+  if(err) throw err;
+  console.log(chalk.green(`${files.length} events loaded.`));
+
+  files.forEach((f) => {
+    const events = require(`./events/${f}`);
+    const event = f.split(".")[0];
+    client.on(event, events.bind(null, client));
+    delete require.cache[require.resolve(`./events/${f}`)];
+  });
+});
+
+client.login(process.env.bot.token);
+module.exports = client;
