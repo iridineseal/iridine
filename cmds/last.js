@@ -19,7 +19,7 @@ const poop = JsonFind(result);
 if(poop.findValues('text').text === undefined) return message.channel.send("That user is not playing any music.");
 const trackName = poop.findValues('text').text.toString() + " - " + poop.findValues('name').name.toString();
 function Random(num) {return Math.floor(Math.random * num)};
-if(poop.findValues('nowplaying') == "true") {
+if(poop.findValues('nowplaying');.nowplaying == "true") {
 	status = "Currently playing for ";
 } else {
 	status = "Last playing for "	
