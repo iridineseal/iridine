@@ -6,7 +6,7 @@ const flastm = require('flastm')(config);
 const JsonFind = require('json-find');
 module.exports.run = async(client, message, args) => {
 const user = flastm.user;
-const status = "";
+let status = "";
 var result;
 try {
 await user.getRecentTracks(args[0]).then(res => result = res);
