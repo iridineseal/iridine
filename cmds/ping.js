@@ -1,12 +1,9 @@
 module.exports.run = async (client, message, args) => {
 const m = await message.channel.send(".");
 const embed = {
-    "description": `Pong`,
+    "description": `Pong\n`,
     "color": client.resolver.resolveColor('RANDOM'),
     "footer": {},
-    "author": {
-      "name": "Iridine"
-    },
      fields: [{
             name: "local latency:",
             value: `${m.createdTimestamp - message.createdTimestamp}ms\n`
