@@ -1,7 +1,7 @@
 module.exports.run = async (client, message, args) => {
 const m = await message.channel.send(".");
 const embed = {
-    "description": `Pong\n`,
+    "description": ``,
     "color": client.resolver.resolveColor('RANDOM'),
     "footer": {},
      fields: [{
