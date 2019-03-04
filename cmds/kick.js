@@ -5,7 +5,7 @@ const nouser = await new Discord.RichEmbed().setDescription("You need to mention
 
 let mentioned = message.mentions.users.first();
 
-if(!mentioned) message.channel.send({ nouser });
+if(!mentioned) message.channel.send(nouser);
 }
 
 module.exports.help = {
