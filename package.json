@@ -7,7 +7,7 @@
     "chalk": "^2.4.2",
     "discord.js": "^11.4.2",
     "flastm": "^1.0.1",
-    "json-find": "^2.0.3"
+    "json-find": "^2.0.3",
     "sqlite3": "^4.0.6"
   },
   "devDependencies": {},
