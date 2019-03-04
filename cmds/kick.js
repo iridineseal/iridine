@@ -12,6 +12,7 @@ if(message.member.hasPermission('KICK_MEMBERS') != true) return message.channel.
 if(!mentioned) return message.channel.send(nouser);
 if(mentioned.kickable != true) return message.channel.send(noperms);
 if(mentioned.hasPermission('KICK_MEMBERS')) return message.channel.send(staff);
+return message.channel.send(kick);
 }
 
 module.exports.help = {
