@@ -6,6 +6,9 @@ const noperms2 = await new Discord.RichEmbed().setDescription("You are missing t
 const staff = await new Discord.RichEmbed().setDescription("The mentioned user is a staff member.").setColor(client.resolver.resolveColor('RANDOM'));
 let mentioned = message.mentions.members.first();
 let reason = args.slice(1).join(' ');
+const kick = await new Discord.RichEmbed().setDescription(`${mentioned.mention} was kicked by ${message.author.mention} for ${reason}`).setColor(client.resolver.resolveColor('RANDOM'));
+let mentioned = message.mentions.members.first();
+let reason = args.slice(1).join(' ');
 
 if(message.member.hasPermission('KICK_MEMBERS') != true) return message.channel.send(noperms2);
 if(!mentioned) return message.channel.send(nouser);
