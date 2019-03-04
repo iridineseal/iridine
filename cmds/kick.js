@@ -1,5 +1,5 @@
 module.exports.run = async (client, message, args) => {
-
+let mentioned = message.mentions.users.first();
 }
 
 module.exports.help = {
