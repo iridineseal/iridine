@@ -6,7 +6,7 @@ const staff = await new Discord.RichEmbed().setDescription("The mentioned user i
 let mentioned = message.mentions.users.first();
 
 if(!mentioned) return message.channel.send(nouser);
-if(!mentioned.kickable) return message.channel.send(noperms);
+if(!mentioned.bannable) return message.channel.send(noperms);
 if(mentioned.hasPermission('KICK_MEMBER')) return message.channel.send(staff);
 }
 
