@@ -1,4 +1,7 @@
 module.exports.run = async (client, message, args) => {
+const nouser = new Discord.RichEmbed().setDescription("You need to mention a user to kick.").setColor(client.resolver.resolveColor('RANDOM'));
+
+
 let mentioned = message.mentions.users.first();
 
 if(!mentioned) return message.channel.send({ nouser });
