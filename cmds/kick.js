@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 const nouser = new Discord.RichEmbed().setDescription("You need to mention a user to kick.").setColor(client.resolver.resolveColor('RANDOM'));
 
