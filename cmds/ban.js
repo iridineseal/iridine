@@ -1,4 +1,4 @@
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const chalk = require("chalk");
 module.exports.run = async (client, message, args) => {
 const nouser = await new Discord.RichEmbed().setDescription("You need to mention a user to ban.").setColor(client.resolver.resolveColor('RANDOM'));
