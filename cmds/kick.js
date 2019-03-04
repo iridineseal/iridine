@@ -5,8 +5,8 @@ const noperms = await new Discord.RichEmbed().setDescription("I don’t have per
 
 let mentioned = message.mentions.users.first();
 
-if(!mentioned) message.channel.send(nouser);
-if(!mentioned.kickable) message.channel.send(noperms)(
+if(!mentioned) return message.channel.send(nouser);
+if(!mentioned.kickable) return message.channel.send(noperms);
 }
 
 module.exports.help = {
