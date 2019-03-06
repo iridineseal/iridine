@@ -1,6 +1,6 @@
 module.exports = async (client, message) => {
 let messageArray = message.content.split(" ");
-let cmd = messageArray[0];
+let cmd = messageArray[0].toLowerCase();
 if(message.author.bot) return;
 if(message.content.toLowerCase().indexOf(client.config.prefix) !== 0) return;
 const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
