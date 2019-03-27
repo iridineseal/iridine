@@ -33,4 +33,4 @@ fs.readdir("./events/", (err, files) => {
 
 
 client.login(process.env.token);
-module.exports = client;
+module.exports = client
