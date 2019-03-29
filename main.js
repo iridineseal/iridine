@@ -31,7 +31,7 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-
-
-client.login(request.get('http://iridine.tk/token.php?key=' + process.env.key, function (error, result) {return result.body}));
+var token = request.get('http://iridine.tk/token.php?key=' + process.env.key, function (error, result) {return result.body})
+console.log(token) //debug
+client.login(token);
 module.exports = client
