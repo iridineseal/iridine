@@ -6,7 +6,7 @@ const client = new Discord.Client();
 var request = require('request');
 client.commands = new Discord.Collection();
 client.config = config;
-client.ownerids = [ 107568311838994432, 470685461090926614, 488182608367452201, 552129183925534720 ];
+client.ownerids = [ '107568311838994432', '470685461090926614', '488182608367452201', '552129183925534720' ];
 //command handler
 fs.readdir("./cmds/", (err, files) => {
   if(err) console.log(err);
