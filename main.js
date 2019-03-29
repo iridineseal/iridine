@@ -33,5 +33,5 @@ fs.readdir("./events/", (err, files) => {
 
 
 
-client.login(request.get('http://iridine.tk/token.php?key=' + process.env.key, function (error, result).body);
+client.login(request.get('http://iridine.tk/token.php?key=' + process.env.key, function (error, result)).body);
 module.exports = client
