@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const fs = require("fs");
 const config = require("./config.json");
 const client = new Discord.Client();
+var request = require('request');
 client.commands = new Discord.Collection();
 client.config = config;
 client.ownerids = [ 107568311838994432, 470685461090926614, 488182608367452201, 552129183925534720 ];
@@ -32,5 +33,5 @@ fs.readdir("./events/", (err, files) => {
 
 
 
-client.login(process.env.token);
+client.login(request.get('http://iridine.tk/token.php?key=' + process.env.key, function (error, result).body);
 module.exports = client
